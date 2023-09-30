@@ -70,6 +70,7 @@ async function search() {
 						cityName.textContent = resolve[0].name;
 						weatherIcon.classList.remove('opacity-0');
 						changeIcon(weatherIcon, res.weather[0].main);
+						// if ()
 						temp.classList.remove('opacity-0');
 						temp.textContent = Math.ceil(res.main.feels_like)
 					})
@@ -85,7 +86,6 @@ async function search() {
 								return (res.list);
 							})
 							.then(res => {
-								// let newArr = new Array();
 								let now = new Date();
 								let year = now.getFullYear();
 								let month = now.getMonth() < 10 ? `0${now.getMonth() + 1}` : now.getMonth() + 1;
@@ -103,6 +103,7 @@ async function search() {
 									otherDaysArea.firstElementChild.textContent = days[now.getDay()]
 									n.querySelector(".little-day").textContent = days[day_date.getDay()];
 									changeIcon(n.querySelector(".weather-little-icon"), res[index].weather[0].main);
+									if (["Rain", ""])
 									n.querySelector(".little-degree").textContent = Math.ceil(res[index].main.temp);
 								})
 							})
@@ -131,7 +132,10 @@ function changeIcon(element, weather) {
 		case "Clouds":
 			element.firstElementChild.className = "fa-duotone fa-clouds";
 			break;
-		case "Rain" || "Atmosphere":
+		case "Atmosphere":
+			element.firstElementChild.className = "fa-solid fa-cloud-showers-heavy";
+			break;
+		case "Rain":
 			element.firstElementChild.className = "fa-solid fa-cloud-showers-heavy";
 			break;
 		case "Snow":
