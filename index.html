@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather</title>
+	<link rel="stylesheet" href="./srcs/css/main.css">
+	<link rel="stylesheet" href="./srcs/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-b from-hard-blue-from to-hard-blue-bg-to lg:flex lg:justify-center">
+	<div class="app-container h-screen lg:w-[65rem] 
+				text-white-txt font-['Open Sans'] flex flex-col itece justify-between py-5 text-center pt-5 overflow-auto">
+		<header>
+			<div class="date flex justify-center text-md font-bold">Monday, 27th April</div>
+			<div class="time text-3xl py-4">3:13pm</div>
+			<div class="city"></div>
+		</header>
+		<div class="weather-area row-span-2 flex flex-col justify-center items-center mt-5 mb-10">
+
+			<div class="search-box flex justify-between items-center my-5">
+				<input
+					class="w-[75%] rounded-xl px-3 py-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-2 transition text-hard-blue-bg-to"
+					type="text" placeholder="Seach by city" />
+				<button class="w-[20%] text-sm bg-white-txt px-1 rounded-sm text-hard-blue-bg-to">Search</button>
+			</div>
+
+			<div class="weather-big-icon text-[11rem] ml-5 opacity-0">
+				<i class="fa-solid fa-cloud-showers-heavy"></i>
+			</div>
+			<div class="degree text-7xl font-light relative after:absolute mt-10 after:content-['°'] opacity-0">
+				19
+			</div>
+		</div>
+		<div class="other-days-area opacity-0">
+			<div class="monday text-2xl">Monday</div>
+			<div class="line-container flex justify-center">
+				<div class="line h-[0.124rem] w-[60%] bg-white-txt my-5 rounded-xl"></div>
+			</div>
+			<div class="other-days-container flex justify-around">
+				<div class="day-block">
+					<div class="day little-day">6am</div>
+					<div class="weather-little-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+					<div class="little-degree">10</div>
+				</div>
+				<div class="day-block">
+					<div class="day little-day">6am</div>
+					<div class="weather-little-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+					<div class="little-degree">10</div>
+				</div>
+				<div class="day-block">
+					<div class="day little-day">6am</div>
+					<div class="weather-little-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+					<div class="little-degree">10</div>
+				</div>
+				<div class="day-block">
+					<div class="day little-day">6am</div>
+					<div class="weather-little-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+					<div class="little-degree">10</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./srcs/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- <i class="fa-solid fa-cloud-sun"></i> cloud-sun -->
+
+<!-- <i class="fa-solid fa-sun"></i>  sun -->
+
+<!-- <i class="fa-solid fa-cloud-showers-heavy"></i>  cloud-showers-heavy -->
+
+<!-- <i class="fa-regular fa-cloud-snow"></i>  cloud-snow -->
+
+<!-- <i class="fa-duotone fa-smoke"></i> Fog -->
+
+<!-- <i class="fa-regular fa-tornado"></i> Tornado -->
+
+<!-- <i class="fa-regular fa-cloud-sleet"></i> Sleet -->

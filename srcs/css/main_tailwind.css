@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.other-days-area .day-block {
+	@apply flex flex-col items-center justify-center;
+}
+
+.other-days-area .little-day {
+	@apply text-xs tracking-wider;
+}
+
+.other-days-area .little-degree {
+	@apply text-sm relative after:absolute after:content-['°'];
+}
