@@ -821,10 +821,6 @@ video {
   height: 0.124rem;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .w-\[20\%\]{
   width: 20%;
 }
@@ -1815,21 +1811,11 @@ video {
 
 .bg-white-txt{
   --tw-bg-opacity: 1;
-  background-color: rgb(198 207 212 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.from-hard-blue-from{
-  --tw-gradient-from: #2f5071 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(47 80 113 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-hard-blue-bg-to{
-  --tw-gradient-to: #494075 var(--tw-gradient-to-position);
 }
 
 .decoration-slice{
@@ -2157,7 +2143,7 @@ video {
 
 .text-white-txt{
   --tw-text-opacity: 1;
-  color: rgb(198 207 212 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2504,6 +2490,37 @@ video {
   position: absolute;
   --tw-content: '°';
   content: var(--tw-content);
+}
+
+.app-height {
+  height: 100vh;
+}
+
+@media screen and (max-height: 780px) {
+  .app-height {
+    height: auto;
+  }
+}
+
+.light-blue-bg{
+  --tw-gradient-from: #46afcf var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(70 175 207 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #6abad3 var(--tw-gradient-to-position);
+}
+
+.hard-blue-bg{
+  --tw-gradient-from: #2f5071 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(47 80 113 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #494075 var(--tw-gradient-to-position);
+}
+
+.orange-bg{
+  --tw-gradient-from: #f5d177 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(245 209 119 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #f29f85 var(--tw-gradient-to-position);
 }
 
 @media (min-width: 640px){

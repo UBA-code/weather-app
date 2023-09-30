@@ -70,7 +70,13 @@ async function search() {
 						cityName.textContent = resolve[0].name;
 						weatherIcon.classList.remove('opacity-0');
 						changeIcon(weatherIcon, res.weather[0].main);
-						// if ()
+						document.body.classList.remove('light-blue-bg', 'hard-blue-bg', 'orange-bg');
+						if (["Rain", "Snow", "Drizzle", "Thunderstorm", "Fog", "Tornado", "Sleet"].includes(res.weather[0].main))
+							document.body.classList.add('hard-blue-bg');
+						else if ("Clear" == res.weather[0].main)
+							document.body.classList.add('orange-bg');
+						else if (["Clouds", "Atmosphere"].includes(res.weather[0].main))
+							document.body.classList.add('light-blue-bg');
 						temp.classList.remove('opacity-0');
 						temp.textContent = Math.ceil(res.main.feels_like)
 					})
@@ -103,7 +109,6 @@ async function search() {
 									otherDaysArea.firstElementChild.textContent = days[now.getDay()]
 									n.querySelector(".little-day").textContent = days[day_date.getDay()];
 									changeIcon(n.querySelector(".weather-little-icon"), res[index].weather[0].main);
-									if (["Rain", ""])
 									n.querySelector(".little-degree").textContent = Math.ceil(res[index].main.temp);
 								})
 							})

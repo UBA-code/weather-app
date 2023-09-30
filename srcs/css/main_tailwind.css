@@ -16,3 +16,25 @@
 .other-days-area .little-degree {
 	@apply text-sm relative after:absolute after:content-['°'];
 }
+
+.app-height {
+	height: 100vh;
+}
+
+@media screen and (max-height: 780px) {
+	.app-height {
+		height: auto;
+	}
+}
+
+.light-blue-bg {
+	@apply from-light-blue-bg-from to-light-blue-bg-to;
+}
+
+.hard-blue-bg {
+	@apply from-hard-blue-from to-hard-blue-bg-to;
+}
+
+.orange-bg {
+	@apply from-orange-bg-from to-orange-bg-to;
+}
