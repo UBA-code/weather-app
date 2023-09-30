@@ -55,7 +55,7 @@ async function search() {
 		let otherDaysArea = document.querySelector(".app-container .other-days-area");
 		let cityName = document.querySelector(".app-container .city");
 
-		await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&appid=${apiKey}`)
+		await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&appid=${apiKey}`)
 			.then((resolve) => {
 				if (resolve.status != 200)
 					throw ("Unvalid City");
