@@ -94,7 +94,7 @@ async function search() {
 							.then(res => {
 								let now = new Date();
 								let year = now.getFullYear();
-								let month = now.getMonth() < 10 ? `0${now.getMonth() + 1}` : now.getMonth() + 1;
+								let month = now.getMonth() + 1 < 10 ? `0${now.getMonth() + 1}` : now.getMonth() + 1;
 								let day = now.getDate() < 10 ? `0${now.getDate()}` : now.getDate();
 								res = res.filter(elem => {
 									if (elem.dt_txt.match(/\d{4}-\d{1,2}-\d{1,2}/)[0] === `${year}-${month}-${day}`
